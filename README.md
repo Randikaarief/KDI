@@ -3,13 +3,12 @@
 
 Implementasi algoritma **RC4 (Stream Cipher)** dari nol (**from scratch**) menggunakan Python, tanpa memakai library enkripsi instan seperti `cryptography`, `pycrypto`, dll.
 
-Program menampilkan langkah-langkah utama RC4 secara **step-by-step** (tabel KSA, PRGA, dan XOR) agar mudah dipresentasikan / direkam layar.
+Program menampilkan langkah-langkah utama RC4 secara **step-by-step** (tabel KSA, PRGA, dan XOR).
 
 ---
 
 ## Isi Repo
-- `rc4_presentasi.py` : program utama (KSA + PRGA + XOR) dengan output tabel presentasi
-- (opsional) `rc4_demo.py` : versi verbose sederhana (kalau kamu juga mau simpan)
+- `rc4.py` : program utama (KSA + PRGA + XOR) dengan output tabel presentasi
 
 ---
 
@@ -118,24 +117,4 @@ XOR_STEPS = 24
 
 ---
 
-## Lisensi
 
-Untuk tugas kuliah / edukasi.
-
-```
-
----
-
-## Bagian “Key” sebaiknya ditulis seperti apa?
-Pakai format di README tadi, intinya harus ada:
-
-- **key_str itu apa** (kunci simetris)
-- **bagaimana jadi bytes** (UTF-8 encode)
-- **bagaimana dipakai di KSA** (`key[i % keylen]`)
-- catatan: demo edukasi vs produksi (opsional tapi bagus)
-
-Kalau kamu mau versi yang lebih “dosen friendly”, ini paragraf yang bisa kamu tempel:
-
-**“Key pada RC4 bersifat simetris (satu kunci untuk enkripsi dan dekripsi). Pada program ini kunci diinput sebagai string `key_str`, kemudian diubah menjadi deret byte UTF-8 (`encode('utf-8')`). Pada tahap KSA, byte kunci digunakan secara berulang menggunakan indeks `i % key_length` untuk mempengaruhi nilai `j` dan proses swap pada array state S.”**
-
-```
