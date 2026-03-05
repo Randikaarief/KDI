@@ -93,7 +93,7 @@ Program akan menampilkan:
 
 ---
 
-## Mengatur Jumlah Langkah yang Ditampilkan (Untuk Presentasi)
+## Mengatur Jumlah Langkah yang Ditampilkan
 
 Di `main()` kamu bisa atur:
 
